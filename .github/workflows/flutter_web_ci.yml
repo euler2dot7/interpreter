@@ -32,11 +32,11 @@ jobs:
         working-directory: ./
       - name: Deploy
         run: |
-          cd example/build/web
+          cd  build/web
           git init
           git config user.name  "CI"
           git config user.email "flutter-ci@github.com"
-          git remote add secure-origin https://${{ secrets.ACCESS_TOKEN }}@github.com/zonble/flutter_turtle.git
+          git remote add secure-origin https://${{ secrets.ACCESS_TOKEN }}@github.com/euler2dot7/interpreter.git
           git checkout -b gh-pages
           git add .
           git commit -m "Updated docs"
